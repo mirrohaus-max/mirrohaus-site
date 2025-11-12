@@ -22,8 +22,8 @@ export default function Page() {
     className="fade-in hero-logo"
     src="/logo.png"
     alt="MirroHaus"
-    width={860}
-    height={860}
+    width={1260}
+    height={1260}
     priority
   />
 </section>
