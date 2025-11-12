@@ -1,12 +1,13 @@
+'use client';
 import Image from 'next/image';
-import './globals.css';
+import Reveal from '../components/Reveal';
 
 export default function Page() {
   return (
     <>
       <header className="nav">
         <div style={{display:'flex',alignItems:'center',gap:12}}>
-          <Image src="/logo.png" alt="MirroHaus logo" width={36} height={36} />
+          <Image src="/icon.png" alt="MirroHaus mark" width={28} height={28} />
           <strong>MirroHaus</strong>
         </div>
         <nav>
@@ -18,59 +19,50 @@ export default function Page() {
 
       <main>
         <section className="hero container">
-  <Image
-    className="fade-in hero-logo"
-    src="/logo.png"
-    alt="MirroHaus"
-    width={1260}
-    height={1260}
-    priority
-  />
-</section>
-
+          <div className="hero-bg" />
+          <Image
+            className="hero-logo fade-in"
+            src="/logo.png"
+            alt="MirroHaus"
+            width={1400}
+            height={1400}
+            priority
+          />
+        </section>
 
         <section id="about" className="section container">
-          <h2>About Us</h2>
-          <p>
+          <Reveal as="h2">About Us</Reveal>
+          <Reveal delay={80} as="p">
             MirroHaus is a premium creative studio that designs brand systems, digital experiences,
             and campaign-ready assets with precision and restraint. We combine strategy, design,
             and engineering to ship work that feels inevitable—clean, fast, and built to scale.
-          </p>
-          <p>
+          </Reveal>
+          <Reveal delay={160} as="p">
             From concept to launch, we operate as a quiet force behind the brands, building
             the infrastructure that lets great products speak for themselves.
-          </p>
+          </Reveal>
         </section>
 
         <section id="work" className="section container">
-          <h2>Our Work</h2>
-          <p>Selected directions and systems we build for founders and teams.</p>
-
-          <div className="grid">
-            <article className="card">
-              <div>
-                <h3>Brand Systems</h3>
-                <span>Identity, typography, motion, guidelines.</span>
-              </div>
-            </article>
-            <article className="card">
-              <div>
-                <h3>Web Experiences</h3>
-                <span>Next.js sites, ecommerce, performance.</span>
-              </div>
-            </article>
-            <article className="card">
-              <div>
-                <h3>Campaign Assets</h3>
-                <span>Art direction, landing pages, creative ops.</span>
-              </div>
-            </article>
-            <article className="card">
-              <div>
-                <h3>Tooling & Automations</h3>
-                <span>Internal dashboards, content systems, AI workflows.</span>
-              </div>
-            </article>
+          <Reveal as="h2">Our Work</Reveal>
+          <Reveal delay={80} as="p">Select directions and systems.</Reveal>
+          <div className="grid portfolio">
+            {[
+              {src:'/projects/luxelane.jpg', title:'Luxe Lane', desc:'Luxury fashion identity & ecommerce'},
+              {src:'/projects/ybgoode.jpg', title:'YB Goode', desc:'Denim-forward brand system & storefront'},
+              {src:'/projects/void.jpg', title:'The VØID Label', desc:'Monochrome editorial & web build'},
+              {src:'/projects/club69.jpg', title:'Club69', desc:'Campaign landing system & creative ops'}
+            ].map((p,i)=>(
+              <Reveal key={p.title} delay={120 + i*60} className="card project">
+                <div className="image-wrap">
+                  <Image src={p.src} alt={p.title} width={800} height={600} />
+                </div>
+                <div className="overlay">
+                  <h3>{p.title}</h3>
+                  <span>{p.desc}</span>
+                </div>
+              </Reveal>
+            ))}
           </div>
 
           <a className="cta" href="mailto:mirrohaus@gmail.com">Start a project</a>
@@ -78,7 +70,7 @@ export default function Page() {
       </main>
 
       <footer className="footer">
-        © {new Date().getFullYear()} MirroHaus. All rights reserved.
+        © {new Date().getFullYear()} MirroHaus · Designed & Built in Boston
       </footer>
     </>
   );
