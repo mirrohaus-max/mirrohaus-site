@@ -55,13 +55,13 @@ body {
 
 .hero-logo {
   width: 100%;
-  max-width: 640px;
+  max-width: 1260px;
   animation: fadeUp 0.6s ease-out forwards;
 }
 
 @media (min-width: 1024px) {
   .hero-logo {
-    max-width: 860px;
+    max-width: 1260px;
   }
 }
 
