@@ -18,9 +18,16 @@ export default function Page() {
 
       <main>
         <section className="hero container">
-          <Image src="/logo.png" alt="MirroHaus" width={640} height={640} priority />
-          <p className="tagline">A Creative System of Brands</p>
-        </section>
+  <Image
+    className="fade-in hero-logo"
+    src="/logo.png"
+    alt="MirroHaus"
+    width={860}
+    height={860}
+    priority
+  />
+</section>
+
 
         <section id="about" className="section container">
           <h2>About Us</h2>
