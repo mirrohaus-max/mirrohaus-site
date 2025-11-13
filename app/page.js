@@ -37,7 +37,7 @@ export default function Page() {
   <Reveal as="h2">About Us</Reveal>
 
   <Reveal as="p" delay={80} className="about-lead">
-    MirroHaus is a premium creative studio that architects brand systems, high-performance web
+    MIRRØHAUS is a premium creative studio that architects brand systems, high-performance web
     experiences, and campaign engines that sell. We combine strategy, design, and engineering to
     ship work that feels inevitable—clean, fast, and built to scale.
   </Reveal>
