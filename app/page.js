@@ -97,6 +97,17 @@ export default function Page() {
         <li>Micro-automations</li>
       </ul>
     </Reveal>
+    <Reveal className="cap" delay={300}>
+  <h4>Publishing</h4>
+  <p>End-to-end book production for print and digital—designed to look premium and move units.</p>
+  <ul className="list">
+    <li>Manuscript structure & editing</li>
+    <li>Cover design (6×9, hard/soft), interior layout</li>
+    <li>ISBN/Bowker, metadata & categories</li>
+    <li>KDP + IngramSpark setup & distribution</li>
+    <li>Launch pages, ads, and review systems</li>
+  </ul>
+</Reveal>
   </div>
 
   {/* Approach */}
