@@ -32,25 +32,30 @@ body{
 .nav a:hover::after{ transform:scaleX(1); }
 
 /* HERO — tighter vertical rhythm */
-.hero{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  /* Top/bottom space scales with viewport but stays compact */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: clamp(48px, 8vh, 96px) 0 clamp(32px, 6vh, 72px);
-  overflow:hidden;
+  overflow: hidden;
+  background: url('/hero.jpg') center center / cover no-repeat;
 }
 
-/* Keep the logo large but cap by viewport height so it doesn't create excess space */
-.hero-logo{
-  width: 100%;
-  max-width: 1200px;       /* you can push to 1300–1400 if you want more impact */
-  max-height: 68vh;        /* prevents huge vertical overflow */
-  height: auto;
-  filter: drop-shadow(0 22px 60px rgba(0,0,0,.55));
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+  z-index: 1;
 }
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
 
 @media (max-width: 900px){ .hero-logo{ max-width: 760px; max-height: 60vh; } }
 @media (max-width: 600px){ .hero-logo{ max-width: 520px; max-height: 50vh; } }
