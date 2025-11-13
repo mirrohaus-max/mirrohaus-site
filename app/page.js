@@ -6,16 +6,13 @@ export default function Page() {
   return (
     <>
       <header className="nav">
-        <div style={{display:'flex',alignItems:'center',gap:12}}>
-          <Image src="/icon.png" alt="MirroHaus mark" width={28} height={28} />
-          <strong>MirroHaus</strong>
-        </div>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#work">Our Work</a>
-          <a href="mailto:mirrohaus@gmail.com" className="cta" style={{marginLeft:12}}>Book a call</a>
-        </nav>
-      </header>
+  <div style={{display:'flex',alignItems:'center',gap:12}}>
+    <Image src="/icon.png" alt="MIRRØHAUS mark" width={28} height={28} />
+    <strong aria-label="MIRRØHAUS">MIRRØHAUS</strong>
+  </div>
+  ...
+</header>
+
 
       <main>
         <section className="hero container">
