@@ -59,7 +59,7 @@ export default function Page() {
   </div>
 
   {/* Capabilities */}
-  <Reveal as="h3" delay={220} className="subhead">What we ship</Reveal>
+  <Reveal as="h3" delay={220} className="subhead">What We Do</Reveal>
   <div className="cap-grid">
     <Reveal className="cap" delay={240}>
       <h4>Brand Systems</h4>
@@ -108,11 +108,6 @@ export default function Page() {
     <Reveal className="step" delay={400}><span className="pill">04</span><div><strong>Launch & Grow</strong><p>Ship, measure, refine. Hand-off playbook included.</p></div></Reveal>
   </div>
 
-  {/* CTA strip */}
-  <div className="cta-row">
-    <a className="cta" href="mailto:mirrohaus@gmail.com?subject=Project%20Inquiry%20—%20MirroHaus">Start a project</a>
-    <a className="ghost" href="#work">View work</a>
-  </div>
 </section>
 
 
