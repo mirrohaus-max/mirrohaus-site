@@ -138,7 +138,7 @@ export default function Page() {
       </main>
 
       <footer className="footer">
-        © {new Date().getFullYear()} MirroHaus · Designed & Built in Boston
+        © {new Date().getFullYear()} MIRRØHAUS · Designed & Built in Boston
       </footer>
     </>
   );
