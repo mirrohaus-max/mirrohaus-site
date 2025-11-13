@@ -14,7 +14,7 @@ export default function Page() {
     <a href="#about">About</a>
     <a href="#work">Our Work</a>
     <a href="mailto:mirrohaus@gmail.com" className="cta" style={{ marginLeft: 12 }}>
-      Book a Call
+      Book a call
     </a>
   </nav>
 </header>
