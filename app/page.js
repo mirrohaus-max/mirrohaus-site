@@ -30,18 +30,88 @@ export default function Page() {
           />
         </section>
 
-        <section id="about" className="section container">
-          <Reveal as="h2">About Us</Reveal>
-          <Reveal delay={80} as="p">
-            MirroHaus is a premium creative studio that designs brand systems, digital experiences,
-            and campaign-ready assets with precision and restraint. We combine strategy, design,
-            and engineering to ship work that feels inevitable—clean, fast, and built to scale.
-          </Reveal>
-          <Reveal delay={160} as="p">
-            From concept to launch, we operate as a quiet force behind the brands, building
-            the infrastructure that lets great products speak for themselves.
-          </Reveal>
-        </section>
+       <section id="about" className="section container about">
+  <Reveal as="h2">About Us</Reveal>
+
+  <Reveal as="p" delay={80} className="about-lead">
+    MirroHaus is a premium creative studio that architects brand systems, high-performance web
+    experiences, and campaign engines that sell. We combine strategy, design, and engineering to
+    ship work that feels inevitable—clean, fast, and built to scale.
+  </Reveal>
+
+  {/* KPIs / Signals */}
+  <div className="kpis">
+    <Reveal className="kpi" delay={120}>
+      <strong>1–3 wk</strong>
+      <span>Typical sprint to launch</span>
+    </Reveal>
+    <Reveal className="kpi" delay={160}>
+      <strong>90+</strong>
+      <span>Lighthouse performance targets</span>
+    </Reveal>
+    <Reveal className="kpi" delay={200}>
+      <strong>Made to convert</strong>
+      <span>Systems-first, revenue-focused</span>
+    </Reveal>
+  </div>
+
+  {/* Capabilities */}
+  <Reveal as="h3" delay={220} className="subhead">What we ship</Reveal>
+  <div className="cap-grid">
+    <Reveal className="cap" delay={240}>
+      <h4>Brand Systems</h4>
+      <p>Identity, typography, motion language, usage rules, and kits you can scale without guesswork.</p>
+      <ul className="list">
+        <li>Logo & typographic system</li>
+        <li>Guidelines & components</li>
+        <li>Motion & art direction</li>
+      </ul>
+    </Reveal>
+    <Reveal className="cap" delay={260}>
+      <h4>Web Experiences</h4>
+      <p>Next.js builds tuned for speed, SEO, and conversions—designed to look expensive and load fast.</p>
+      <ul className="list">
+        <li>Landing pages & sites</li>
+        <li>Ecommerce (Shopify/Headless)</li>
+        <li>Performance & analytics</li>
+      </ul>
+    </Reveal>
+    <Reveal className="cap" delay={280}>
+      <h4>Campaign Systems</h4>
+      <p>Campaign-ready modules and creative ops so you can launch, learn, and scale on repeat.</p>
+      <ul className="list">
+        <li>Offer pages & funnels</li>
+        <li>Ad creative & variants</li>
+        <li>Playbooks & handoff</li>
+      </ul>
+    </Reveal>
+    <Reveal className="cap" delay={300}>
+      <h4>Content & Automations</h4>
+      <p>Repeatable content pipelines and light tooling that remove friction from publishing.</p>
+      <ul className="list">
+        <li>CMS & content models</li>
+        <li>Dashboards & utilities</li>
+        <li>Micro-automations</li>
+      </ul>
+    </Reveal>
+  </div>
+
+  {/* Approach */}
+  <Reveal as="h3" delay={320} className="subhead">How we work</Reveal>
+  <div className="steps">
+    <Reveal className="step" delay={340}><span className="pill">01</span><div><strong>Discover</strong><p>Goals, constraints, and the fastest path to traction.</p></div></Reveal>
+    <Reveal className="step" delay={360}><span className="pill">02</span><div><strong>Design</strong><p>We map the system—brand, components, and narrative that sells.</p></div></Reveal>
+    <Reveal className="step" delay={380}><span className="pill">03</span><div><strong>Build</strong><p>Production Next.js, optimized for speed, SEO, and scale.</p></div></Reveal>
+    <Reveal className="step" delay={400}><span className="pill">04</span><div><strong>Launch & Grow</strong><p>Ship, measure, refine. Hand-off playbook included.</p></div></Reveal>
+  </div>
+
+  {/* CTA strip */}
+  <div className="cta-row">
+    <a className="cta" href="mailto:mirrohaus@gmail.com?subject=Project%20Inquiry%20—%20MirroHaus">Start a project</a>
+    <a className="ghost" href="#work">View work</a>
+  </div>
+</section>
+
 
         <section id="work" className="section container">
           <Reveal as="h2">Our Work</Reveal>
