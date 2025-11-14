@@ -44,7 +44,7 @@ body{
   padding: 0;
   min-height: 65vh; /* adjust if needed: 60–70vh looks perfect */
 
-  background: url('/hero.jpg') center top / cover no-repeat;
+  background: url('/hero.png') center top / cover no-repeat;
   overflow: hidden;
 }
 
