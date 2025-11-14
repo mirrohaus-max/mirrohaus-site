@@ -40,7 +40,7 @@ body{
   text-align: center;
   padding: clamp(48px, 8vh, 96px) 0 clamp(32px, 6vh, 72px);
   overflow: hidden;
-  background: url('/hero.jpg') center center / cover no-repeat;
+  background: url('/hero.png') center center / cover no-repeat;
 }
 
 .hero::after {
