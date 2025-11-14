@@ -16,9 +16,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MirroHaus — A Creative System of Brands',
+    title: 'MIRRØHAUS — A Creative System of Brands',
     description: 'Brand systems, web experiences, and campaign assets — clean, fast, built to scale.',
-    images: ['/og-image.png']
+    images: ['/mirrohaus.hero.png']
   },
   icons: { icon: '/icon.png', apple: '/apple-touch-icon.png' }
 };
