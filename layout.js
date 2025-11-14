@@ -6,11 +6,11 @@ const playfair = Playfair_Display({ subsets: ['latin'], weight: ['500','600','70
 
 export const metadata = {
   metadataBase: new URL('https://mirrohaus.com'),
-  title: { default: 'MirroHaus — A Creative System of Brands', template: '%s · MirroHaus' },
-  description: 'MirroHaus is a premium creative studio crafting brand systems, web experiences, and campaign-ready assets.',
+  title: { default: 'MIRRØHAUS — A Creative System of Brands', template: '%s · MirroHaus' },
+  description: 'MIRRØHAUS is a premium creative studio crafting brand systems, web experiences, and campaign-ready assets.',
   openGraph: {
     type: 'website', url: 'https://mirrohaus.com',
-    title: 'MirroHaus — A Creative System of Brands',
+    title: 'MIRRØHAUS — A Creative System of Brands',
     description: 'Brand systems, web experiences, and campaign assets — clean, fast, built to scale.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MirroHaus' }]
   },
