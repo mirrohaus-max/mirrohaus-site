@@ -31,28 +31,42 @@ body{
   background: currentColor; transform:scaleX(0); transform-origin:left; transition:transform .15s ease; opacity:.35; }
 .nav a:hover::after{ transform:scaleX(1); }
 
+/* HERO — remove dead space and keep the logo perfectly centered */
 .hero {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: clamp(48px, 8vh, 96px) 0 clamp(32px, 6vh, 72px);
+
+  /* MUCH tighter vertical space */
+  padding: 0;
+  min-height: 65vh; /* adjust if needed: 60–70vh looks perfect */
+
+  background: url('/hero.jpg') center top / cover no-repeat;
   overflow: hidden;
-  background: url('/hero.jpg') center center / cover no-repeat;
 }
 
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+  background: rgba(0, 0, 0, 0.35);
   z-index: 1;
 }
 
 .hero > * {
   position: relative;
   z-index: 2;
+}
+
+/* Make sure logo itself doesn’t force extra height */
+.hero-logo {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0;  
 }
 
 @keyframes bgPulse { 0%{ opacity:.9; } 100%{ opacity:1; filter:brightness(1.08);} }
