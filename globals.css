@@ -31,23 +31,22 @@ body{
   background: currentColor; transform:scaleX(0); transform-origin:left; transition:transform .15s ease; opacity:.35; }
 .nav a:hover::after{ transform:scaleX(1); }
 
-/* HERO — remove dead space and keep the logo perfectly centered */
+/* HERO – center the logo, kill dead space */
 .hero {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;   /* <— CENTER, not flex-end */
   text-align: center;
 
-  /* MUCH tighter vertical space */
   padding: 0;
-  min-height: 65vh; /* adjust if needed: 60–70vh looks perfect */
+  min-height: 55vh;          /* you can tweak 50–60vh */
 
-  background: url('/hero.png') center top / cover no-repeat;
+  background: url('/hero.jpg') center center / cover no-repeat;
   overflow: hidden;
 }
 
+/* Dark overlay */
 .hero::after {
   content: "";
   position: absolute;
@@ -56,17 +55,18 @@ body{
   z-index: 1;
 }
 
+/* Content sits above overlay */
 .hero > * {
   position: relative;
   z-index: 2;
 }
 
-/* Make sure logo itself doesn’t force extra height */
+/* Make sure the image itself isn't adding extra weird spacing */
 .hero-logo {
   width: 100%;
   max-width: 960px;
   height: auto;
-  margin: 0;  
+  margin: 0;
 }
 
 @keyframes bgPulse { 0%{ opacity:.9; } 100%{ opacity:1; filter:brightness(1.08);} }
