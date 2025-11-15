@@ -21,17 +21,16 @@ export default function Page() {
 
 
       <main>
-        <section className="hero container">
-          <div className="hero-bg" />
-          <Image
-            className="hero-logo fade-in"
-            src="/logo.png"
-            alt="MirroHaus"
-            width={1400}
-            height={1400}
-            priority
-          />
-        </section>
+        <section className="hero" id="top">
+  <Image
+    src="/hero.jpg"
+    alt="MIRRØHAUS — A Creative System of Brands"
+    width={1600}
+    height={800}
+    className="hero-logo"
+    priority
+  />
+</section>
 
        <section id="about" className="section container about">
   <Reveal as="h2">About Us</Reveal>
