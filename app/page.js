@@ -1,155 +1,78 @@
-'use client';
-import Image from 'next/image';
-import Reveal from '../components/Reveal';
+import Image from "next/image";
+import { site } from "../lib/site";
 
-export default function Page() {
+export default function HomePage() {
   return (
     <>
-      <header className="nav">
-  <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-    <Image src="/icon.png" alt="MIRRØHAUS mark" width={28} height={28} />
-    <strong>MIRRØHAUS</strong>
-  </div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#work">Our Work</a>
-    <a href="mailto:mirrohaus@gmail.com" className="cta" style={{ marginLeft: 12 }}>
-      Book a call
-    </a>
-  </nav>
-</header>
+      <section className="hero" aria-labelledby="home-title">
+        <div className="container">
+          <h1 id="home-title" style={{marginBottom:8}}>{site.name}</h1>
+          <p style={{fontSize:"1.25rem",maxWidth:"40rem",margin:"0 0 1.25rem"}}>
+            {site.slogan}
+          </p>
+          <a className="btn" href={site.ctaHref}>{site.ctaLabel}</a>
+        </div>
+      </section>
 
+      <section className="section" aria-labelledby="about">
+        <div className="container">
+          <h2 id="about">About {site.name}</h2>
+          <p>
+            MIRRØHAUS is a multidisciplinary creative house built for founders, visionaries,
+            and brands that refuse to blend in.
+          </p>
+          <p>
+            We specialize in transforming raw ideas into iconic identities—through design,
+            storytelling, strategy, and culture.
+          </p>
+          <ul>
+            <li>Brand identity & creative direction</li>
+            <li>Fashion & product design</li>
+            <li>Web design & digital experiences</li>
+            <li>Storytelling & content systems</li>
+            <li>Culture-focused marketing</li>
+          </ul>
+          <p className="quote">
+            If you’re building something <em>bold, original, or culturally impactful</em>, you’re in the right place.
+          </p>
+        </div>
+      </section>
 
-      <main>
-        <section className="hero" id="top">
-  <Image
-    src="/hero.jpg"
-    alt="MIRRØHAUS — A Creative System of Brands"
-    width={1600}
-    height={800}
-    className="hero-logo"
-    priority
-  />
-</section>
-
-       <section id="about" className="section container about">
-  <Reveal as="h2">About Us</Reveal>
-
-  <Reveal as="p" delay={80} className="about-lead">
-    MIRRØHAUS is a premium creative studio that architects brand systems, high-performance web
-    experiences, and campaign engines that sell. We combine strategy, design, and engineering to
-    ship work that feels inevitable—clean, fast, and built to scale.
-  </Reveal>
-
-  {/* KPIs / Signals */}
-  <div className="kpis">
-    <Reveal className="kpi" delay={120}>
-      <strong>1–3 wk</strong>
-      <span>Typical sprint to launch</span>
-    </Reveal>
-    <Reveal className="kpi" delay={160}>
-      <strong>90+</strong>
-      <span>Lighthouse performance targets</span>
-    </Reveal>
-    <Reveal className="kpi" delay={200}>
-      <strong>Made to convert</strong>
-      <span>Systems-first, revenue-focused</span>
-    </Reveal>
-  </div>
-
-  {/* Capabilities */}
-  <Reveal as="h3" delay={220} className="subhead">What We Do</Reveal>
-  <div className="cap-grid">
-    <Reveal className="cap" delay={240}>
-      <h4>Brand Systems</h4>
-      <p>Identity, typography, motion language, usage rules, and kits you can scale without guesswork.</p>
-      <ul className="list">
-        <li>Logo & typographic system</li>
-        <li>Guidelines & components</li>
-        <li>Motion & art direction</li>
-      </ul>
-    </Reveal>
-    <Reveal className="cap" delay={260}>
-      <h4>Web Experiences</h4>
-      <p>Next.js builds tuned for speed, SEO, and conversions—designed to look expensive and load fast.</p>
-      <ul className="list">
-        <li>Landing pages & sites</li>
-        <li>Ecommerce (Shopify/Headless)</li>
-        <li>Performance & analytics</li>
-      </ul>
-    </Reveal>
-    <Reveal className="cap" delay={280}>
-      <h4>Campaign Systems</h4>
-      <p>Campaign-ready modules and creative ops so you can launch, learn, and scale on repeat.</p>
-      <ul className="list">
-        <li>Offer pages & funnels</li>
-        <li>Ad creative & variants</li>
-        <li>Playbooks & handoff</li>
-      </ul>
-    </Reveal>
-    <Reveal className="cap" delay={300}>
-      <h4>Content & Automations</h4>
-      <p>Repeatable content pipelines and light tooling that remove friction from publishing.</p>
-      <ul className="list">
-        <li>CMS & content models</li>
-        <li>Dashboards & utilities</li>
-        <li>Micro-automations</li>
-      </ul>
-    </Reveal>
-    <Reveal className="cap" delay={300}>
-  <h4>Publishing</h4>
-  <p>End-to-end book production for print and digital—designed to look premium and move units.</p>
-  <ul className="list">
-    <li>Manuscript structure & editing</li>
-    <li>Cover design (6×9, hard/soft), interior layout</li>
-    <li>ISBN/Bowker, metadata & categories</li>
-    <li>KDP + IngramSpark setup & distribution</li>
-    <li>Launch pages, ads, and review systems</li>
-  </ul>
-</Reveal>
-  </div>
-
-  {/* Approach */}
-  <Reveal as="h3" delay={320} className="subhead">How we work</Reveal>
-  <div className="steps">
-    <Reveal className="step" delay={340}><span className="pill">01</span><div><strong>Discover</strong><p>Goals, constraints, and the fastest path to traction.</p></div></Reveal>
-    <Reveal className="step" delay={360}><span className="pill">02</span><div><strong>Design</strong><p>We map the system—brand, components, and narrative that sells.</p></div></Reveal>
-    <Reveal className="step" delay={380}><span className="pill">03</span><div><strong>Build</strong><p>Production Next.js, optimized for speed, SEO, and scale.</p></div></Reveal>
-    <Reveal className="step" delay={400}><span className="pill">04</span><div><strong>Launch & Grow</strong><p>Ship, measure, refine. Hand-off playbook included.</p></div></Reveal>
-  </div>
-
-</section>
-
-
-        <section id="work" className="section container">
-          <Reveal as="h2">Our Work</Reveal>
-          <Reveal delay={80} as="p">Select directions and systems.</Reveal>
-          <div className="grid portfolio">
-            {[
-              {src:'/projects/luxelane.jpg', title:'Luxe Lane', desc:'Luxury fashion identity & ecommerce'},
-              {src:'/projects/ybgoode.jpg', title:'YB Goode', desc:'Denim-forward brand system & storefront'},
-              {src:'/projects/void.jpg', title:'The VØID Label', desc:'Monochrome editorial & web build'},
-              {src:'/projects/club69.jpg', title:'Club69', desc:'Campaign landing system & creative ops'}
-            ].map((p,i)=>(
-              <Reveal key={p.title} delay={120 + i*60} className="card project">
-                <div className="image-wrap">
-                  <Image src={p.src} alt={p.title} width={800} height={600} />
-                </div>
-                <div className="overlay">
-                  <h3>{p.title}</h3>
-                  <span>{p.desc}</span>
-                </div>
-              </Reveal>
-            ))}
+      <section className="section" aria-labelledby="work" id="work">
+        <div className="container">
+          <h2 id="work">Our Work</h2>
+          <div className="work">
+            <a className="card" href="/projects/yb-goode" aria-label="YB Goode case study">
+              <Image className="thumb" src="/work/yb-goode.jpg" alt="" width={640} height={360} />
+              <div style={{marginTop:12}}>
+                <strong>YB Goode</strong>
+                <div className="meta">Streetwear. Denim. Expression.</div>
+              </div>
+            </a>
+            <a className="card" href="/projects/void-label" aria-label="The VØID Label case study">
+              <Image className="thumb" src="/work/void.jpg" alt="" width={640} height={360} />
+              <div style={{marginTop:12}}>
+                <strong>The VØID Label</strong>
+                <div className="meta">Avant-garde fashion for modern men.</div>
+              </div>
+            </a>
+            <a className="card" href="/projects/club-69" aria-label="Club 69 case study">
+              <Image className="thumb" src="/work/club69.jpg" alt="" width={640} height={360} />
+              <div style={{marginTop:12}}>
+                <strong>Club 69</strong>
+                <div className="meta">Adult lifestyle. Bold creativity.</div>
+              </div>
+            </a>
           </div>
+        </div>
+      </section>
 
-          <a className="cta" href="mailto:mirrohaus@gmail.com">Start a project</a>
-        </section>
-      </main>
-
-      <footer className="footer">
-        © {new Date().getFullYear()} MIRRØHAUS · Designed & Built in Boston
-      </footer>
+      <section className="section" id="contact" aria-labelledby="cta">
+        <div className="container" style={{textAlign:"center"}}>
+          <h2 id="cta">Let’s Build Something Iconic</h2>
+          <a className="btn" href={site.ctaHref}>{site.ctaLabel}</a>
+        </div>
+      </section>
     </>
   );
 }
